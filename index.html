@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>White nav/dot swiper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    body {
+      background: #77eec4;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .home.swiper {
+      width: 100%;
+      height: auto;
+    }
+    .home.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .home.swiper-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* -------change size and color of swiper buttons and bullets------- */
+    .home.swiper-button-next,
+    .home.swiper-button-prev {
+      color: #fff;
+      opacity: 0.8;
+      font-weight: 900;
+    }
+    .home.swiper-button-next:after,
+    .home.swiper-button-prev:after {
+      font-size: 30px;
+    }
+    .home.swiper-pagination .swiper-pagination-bullet,
+    .home.swiper-pagination .swiper-pagination-bullet-active {
+      /* background-color: #77eec4; */
+      width: 10px;
+      height: 10px;
+      border: 2px solid #fff;
+      background-color: #ffffff00;
+      opacity: 0.5;
+    }
+    .home.swiper-pagination .swiper-pagination-bullet-active {
+      opacity: 0.8;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="home swiper mySwiper">
+    <div class="home swiper-wrapper">
+      <div class="home swiper-slide"><img src="assets/img/necklace_1.jpg" alt=""></div>
+      <div class="home swiper-slide"><img src="assets/img/necklace_2.jpg" alt=""></div>
+      <div class="home swiper-slide"><img src="assets/img/necklace_3.jpg" alt=""></div>
+      <div class="home swiper-slide"><img src="assets/img/necklace_4.jpg" alt=""></div>
+      <div class="home swiper-slide"><img src="assets/img/necklace_5.jpg" alt=""></div>
+    </div>
+    <div class="home swiper-button-next"></div>
+    <div class="home swiper-button-prev"></div>
+    <div class="home swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".home.mySwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+
+</html>
